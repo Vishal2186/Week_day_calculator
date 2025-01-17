@@ -45,33 +45,34 @@ int week_day(int d,string m,int y,int cen)
 }
 
 int main(){
-    int date,year,cen;
+    int date = 0,year = 0,cen = 0;
     string month;
     cout<<endl;
     cout<<"\t\t***---W E E K  D A Y  C A L C U L A T O R---***"<<endl;
     cout<<endl;
 
     cout<<"Enter date = ";cin>>date;
-    if(date<1 || date>32){cout<<"Enter a date that exists!!!"<<endl;main();}
+    if(date<1 || date>32){cout<<"Enter a date that exists!!!\nEnter date = ";cin>>date;cout<<endl;}
     cout<<endl;
 
     cout<<"(like this 'jan-dec')"<<endl;
     cout<<"Enter month = ";cin>>month;
-    if(!find(month)){cout<<"Enter month like the example given above!!!"<<endl;main();}
+    if(!find(month)){cout<<"Enter month like the example given above!!!\nEnter month = ";cin>>month;cout<<endl;}
     cout<<endl;
 
 
     cout<<"(like this '1-99' )"<<endl;
     cout<<"Enter year = ";cin>>year;
-    if(year<1 || year>99){cout<<"Enter year like the example given above!!!"<<endl;main();}
+    if(year<1 || year>99){cout<<"Enter year like the example given above!!!\nEnter year = ";cin>>year;cout<<endl;}
     cout<<endl;
 
     cout<<"(1100-2100 0r any other)"<<endl;
     cout<<"Enter century = ";cin>>cen;
-    if(!(cen%100==0)){cout<<"Enter a proper century!!!"<<endl;main();}
+    if(!(cen%100==0)){cout<<"Enter a proper century!!!\nEnter century = ";cin>>cen;cout<<endl;}
     cout<<endl;cout<<endl;
 
     cout<<"On "<<date<<" "<<month<<", "<<cen+year<<" the day was: "<<week_day(date,month,year,cen);
+    
     cout<<"***************---------------E N D---------------***************";
     return 0;
 }
