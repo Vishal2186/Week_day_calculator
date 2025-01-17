@@ -20,7 +20,7 @@ int week_day(int d,string m,int y,int cen)
         if(arr1[i] == m){month_code = i;break;}
     }
      int odd_days = ( d + arr2[month_code] + cen__code(cen) + y + (y/4) ) % 7;
-     if((m == "jan" || m == "feb") && y == 4)
+     if((m == "jan" || m == "feb") && y%4==0)
      {
         cout<<w_days[odd_days-1]<<endl;
      }
